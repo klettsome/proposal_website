@@ -1,0 +1,94 @@
+// COLOR VARIABLES
+$color-primary-light: #7386a9;
+$color-primary: #2c497f;
+$color-primary-dark: #23314c;
+
+$color-secondary-light: #e89c61;
+$color-secondary: #f99345;
+$color-secondary-dark: #e3863f;
+
+$color-bg: #f3f4f6;
+
+$color-grey-1: #d4d8df;
+$color-grey-2: #8b94a7;
+$color-grey-3: #666c7a;
+
+$color-white: #f3f4f6;
+$color-black: #04070c;
+
+// FONT VARIABLES
+$font-display: "Lato", sans-serif;
+$font-primary: "Raleway", sans-serif;
+
+// UTILITIES
+.op-t {
+  object-position: top;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media (max-width: 56.25em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  color: $color-black;
+  background-color: $color-bg;
+  font-family: $font-primary;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: min-content 100vh repeat(2, min-content) 40vw min-content;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      10,
+      [col-start] minmax(min-content, 12rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+// BUTTON
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--orange {
+    background-color: $color-secondary-dark;
+    color: $color-white;
+  }
+}

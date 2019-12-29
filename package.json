@@ -1,0 +1,14 @@
+{
+  "name": "weddingproposal",
+  "version": "1.0.0",
+  "description": "My wedding proposal",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Kallom",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

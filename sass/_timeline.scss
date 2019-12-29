@@ -1,0 +1,139 @@
+.section-timeline {
+  font-size: 1.8rem;
+  padding: 6rem;
+  grid-column: center-start / center-end;
+
+  @media (max-width: 37.5em) {
+    padding: 3rem 0;
+  }
+}
+
+.timeline {
+  &__box {
+    padding: 50px 0;
+  }
+
+  // Create Line
+  &__item {
+    list-style: none;
+    position: relative;
+    width: 0.3rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+    background: $color-primary-light;
+  }
+
+  // Boxes
+
+  &__content {
+    position: relative;
+    bottom: 0;
+    top: -1.5rem;
+    width: 40rem;
+    padding: 1rem;
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__date {
+    position: relative;
+    bottom: 0;
+    top: -10rem;
+    width: max-content;
+    color: $color-white;
+    padding: 0.8rem 1.6rem;
+    border-radius: 1.8rem;
+    box-shadow: 0 0 0 3px rgba($color-primary-dark, 0.3);
+    transition: all 0.5s ease-in-out;
+    background-color: $color-primary-dark;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__text {
+    margin-top: 1rem;
+  }
+
+  // Right Side
+  &__item:nth-child(odd) &__content,
+  &__item:nth-child(even) &__date {
+    left: 4rem;
+    transform: translateX(20rem);
+  }
+
+  // Left Side
+  &__item:nth-child(even) &__content {
+    left: -43.4rem;
+    text-align: right;
+    transform: translateX(-20rem);
+  }
+
+  &__item:nth-child(odd) &__date {
+    left: -16rem;
+    transform: translateX(-20rem);
+  }
+
+  // Dots
+  &__item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 11rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba($color-secondary-light, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba($color-secondary-light, 0.3);
+    transform: translateX(-50%);
+    transition: background 0.5s ease-in-out;
+  }
+
+  // Show Boxes
+  &__item.show &__content {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__item.show &__date {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .timeline {
+    &__content {
+      width: 25rem;
+    }
+
+    &__item:nth-child(even) &__content {
+      left: -29rem;
+    }
+  }
+}
+
+@media (max-width: 37.5em) {
+  .timeline {
+    &__item {
+      margin-left: 0;
+    }
+
+    &__content {
+      width: calc(100vw - 13rem);
+      top: 4rem;
+    }
+
+    &__item:nth-child(even) &__content {
+      left: 4rem;
+      text-align: left;
+    }
+
+    &__item:nth-child(odd) &__date {
+      left: 4rem;
+      text-align: left;
+    }
+  }
+}
