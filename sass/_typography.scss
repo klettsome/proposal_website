@@ -16,6 +16,11 @@
     font-size: 4rem;
     font-weight: 400;
   }
+
+  @media (max-width: 28.13em) {
+    font-size: 3.5rem;
+    font-weight: 400;
+  }
 }
 
 .heading--2 {
