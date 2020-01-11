@@ -34,12 +34,13 @@
     transition: all 0.5s ease-in-out;
     visibility: hidden;
     opacity: 0;
+    color: lighten($color-primary-dark, 10%);
   }
 
   &__date {
     position: relative;
     bottom: 0;
-    top: -10rem;
+    top: -11rem;
     width: max-content;
     color: $color-white;
     padding: 0.8rem 1.6rem;

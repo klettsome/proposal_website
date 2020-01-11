@@ -1,5 +1,5 @@
 #section-proposal {
-  height: 100vh;
+  grid-column: full-start / full-end;
   background-color: #000;
 
   &::before {
