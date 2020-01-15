@@ -2,6 +2,7 @@
   font-size: 1.8rem;
   padding: 6rem;
   grid-column: center-start / center-end;
+  overflow-x: hidden;
 
   @media (max-width: 37.5em) {
     padding: 3rem 0;
@@ -107,7 +108,7 @@
 @media (max-width: 56.25em) {
   .timeline {
     &__content {
-      width: 25rem;
+      width: calc(100vw - 13rem);
     }
 
     &__item:nth-child(even) &__content {
