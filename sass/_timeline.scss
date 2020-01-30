@@ -3,16 +3,13 @@
   padding: 6rem;
   grid-column: center-start / center-end;
   overflow-x: hidden;
-
   @media (max-width: 37.5em) {
     padding: 3rem 0;
   }
 }
 
 .timeline {
-  &__box {
-    padding: 50px 0;
-  }
+  padding: 5rem;
 
   // Create Line
   &__item {
@@ -29,7 +26,7 @@
   &__content {
     position: relative;
     bottom: 0;
-    top: -1.5rem;
+    top: -3rem;
     width: 40rem;
     padding: 1rem;
     transition: all 0.5s ease-in-out;
@@ -41,7 +38,7 @@
   &__date {
     position: relative;
     bottom: 0;
-    top: -11rem;
+    top: -10rem;
     width: max-content;
     color: $color-white;
     padding: 0.8rem 1.6rem;
@@ -105,27 +102,14 @@
   }
 }
 
-@media (max-width: 56.25em) {
-  .timeline {
-    &__content {
-      width: calc(100vw - 13rem);
-    }
-
-    &__item:nth-child(even) &__content {
-      left: -29rem;
-    }
-  }
-}
-
 @media (max-width: 37.5em) {
   .timeline {
     &__item {
-      margin-left: 0;
+      margin-left: -4rem;
     }
 
     &__content {
-      width: calc(100vw - 13rem);
-      top: 4rem;
+      top: 5rem;
     }
 
     &__item:nth-child(even) &__content {

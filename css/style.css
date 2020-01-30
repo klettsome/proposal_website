@@ -14,9 +14,6 @@ html {
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 28.13em) {
-    html {
-      font-size: 45%; } }
 
 body {
   color: #04070c;
@@ -28,6 +25,9 @@ body {
   display: grid;
   grid-template-rows: min-content 100vh repeat(2, min-content) 40vw min-content;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media (max-width: 56.25em) {
+    .container {
+      grid-template-rows: min-content 80vh repeat(2, min-content) 40vw min-content; } }
 
 .btn, .btn:link, .btn:visited {
   border-radius: 0.5rem;
@@ -363,94 +363,77 @@ body {
     .section-timeline {
       padding: 3rem 0; } }
 
-.timeline__box {
-  padding: 50px 0; }
-
-.timeline__item {
-  list-style: none;
-  position: relative;
-  width: 0.3rem;
-  margin: 0 auto;
-  padding-top: 5rem;
-  background: #7386a9; }
-
-.timeline__content {
-  position: relative;
-  bottom: 0;
-  top: -1.5rem;
-  width: 40rem;
-  padding: 1rem;
-  transition: all 0.5s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-  color: #33486f; }
-
-.timeline__date {
-  position: relative;
-  bottom: 0;
-  top: -11rem;
-  width: max-content;
-  color: #f3f4f6;
-  padding: 0.8rem 1.6rem;
-  border-radius: 1.8rem;
-  box-shadow: 0 0 0 3px rgba(35, 49, 76, 0.3);
-  transition: all 0.5s ease-in-out;
-  background-color: #23314c;
-  visibility: hidden;
-  opacity: 0; }
-
-.timeline__text {
-  margin-top: 1rem; }
-
-.timeline__item:nth-child(odd) .timeline__content,
-.timeline__item:nth-child(even) .timeline__date {
-  left: 4rem;
-  transform: translateX(20rem); }
-
-.timeline__item:nth-child(even) .timeline__content {
-  left: -43.4rem;
-  text-align: right;
-  transform: translateX(-20rem); }
-
-.timeline__item:nth-child(odd) .timeline__date {
-  left: -16rem;
-  transform: translateX(-20rem); }
-
-.timeline__item::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 11rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #e89c61;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(232, 156, 97, 0.3);
-  transform: translateX(-50%);
-  transition: background 0.5s ease-in-out; }
-
-.timeline__item.show .timeline__content {
-  transform: none;
-  visibility: visible;
-  opacity: 1; }
-
-.timeline__item.show .timeline__date {
-  transform: none;
-  visibility: visible;
-  opacity: 1; }
-
-@media (max-width: 56.25em) {
+.timeline {
+  padding: 5rem; }
+  .timeline__item {
+    list-style: none;
+    position: relative;
+    width: 0.3rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+    background: #7386a9; }
   .timeline__content {
-    width: calc(100vw - 13rem); }
+    position: relative;
+    bottom: 0;
+    top: -3rem;
+    width: 40rem;
+    padding: 1rem;
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    color: #33486f; }
+  .timeline__date {
+    position: relative;
+    bottom: 0;
+    top: -10rem;
+    width: max-content;
+    color: #f3f4f6;
+    padding: 0.8rem 1.6rem;
+    border-radius: 1.8rem;
+    box-shadow: 0 0 0 3px rgba(35, 49, 76, 0.3);
+    transition: all 0.5s ease-in-out;
+    background-color: #23314c;
+    visibility: hidden;
+    opacity: 0; }
+  .timeline__text {
+    margin-top: 1rem; }
+  .timeline__item:nth-child(odd) .timeline__content,
+  .timeline__item:nth-child(even) .timeline__date {
+    left: 4rem;
+    transform: translateX(20rem); }
   .timeline__item:nth-child(even) .timeline__content {
-    left: -29rem; } }
+    left: -43.4rem;
+    text-align: right;
+    transform: translateX(-20rem); }
+  .timeline__item:nth-child(odd) .timeline__date {
+    left: -16rem;
+    transform: translateX(-20rem); }
+  .timeline__item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 11rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #e89c61;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(232, 156, 97, 0.3);
+    transform: translateX(-50%);
+    transition: background 0.5s ease-in-out; }
+  .timeline__item.show .timeline__content {
+    transform: none;
+    visibility: visible;
+    opacity: 1; }
+  .timeline__item.show .timeline__date {
+    transform: none;
+    visibility: visible;
+    opacity: 1; }
 
 @media (max-width: 37.5em) {
   .timeline__item {
-    margin-left: 0; }
+    margin-left: -4rem; }
   .timeline__content {
-    width: calc(100vw - 13rem);
-    top: 4rem; }
+    top: 5rem; }
   .timeline__item:nth-child(even) .timeline__content {
     left: 4rem;
     text-align: left; }
