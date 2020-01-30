@@ -115,3 +115,9 @@ $("#navbar a, .btn").on("click", function(event) {
     );
   }
 });
+
+const copyRight = document.querySelector(".footer__content");
+
+const date = new Date().getFullYear();
+
+copyRight.innerText = `\u00A9 Copyright ${date}`;

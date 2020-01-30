@@ -123,3 +123,11 @@
     }
   }
 }
+
+@media (max-width: 23.5em) {
+  .timeline {
+    &__content {
+      width: 35rem;
+    }
+  }
+}
